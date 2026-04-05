@@ -1,6 +1,8 @@
 #include "ofApp.h"
 #include "ofxCv.h"
 #include "ofBitmapFont.h"
+#include <algorithm>
+#include <random>
 
 
 typedef std::vector< int > Word;
@@ -42,7 +44,7 @@ public:
 			std::vector< int > transitionsIndexes(_nTransitions);
 			for (int i = 0; i < _nTransitions; i++)
 				transitionsIndexes[i] = i;
-			std::random_shuffle(transitionsIndexes.begin(), transitionsIndexes.end());
+			std::shuffle(transitionsIndexes.begin(), transitionsIndexes.end(), std::default_random_engine{std::random_device{}()});
 
 			std::vector< int > selectedIndexes;
 			for (int k = 0; k < currentNTransitions; k++)
