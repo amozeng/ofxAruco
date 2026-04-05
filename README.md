@@ -1,3 +1,10 @@
+ofxAruco (C++17 Modernized)
+========
+This is a maintained fork of arturoc/ofxAruco.
+
+The original repository has become outdated and fails to compile with modern C++ standards (C++17 and later) and recent versions of openFrameworks (v0.12.0+). This fork provides the necessary patches to get Aruco markers working in modern development environments.
+
+
 ofxAruco
 ========
 
